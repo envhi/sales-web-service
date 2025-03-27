@@ -18,11 +18,11 @@ class EmployeeController {
             throw new NotFoundError("Employee not found")
         }
 
-        res.json(employee)
+        res.json(employee.rows[0])
     }
 
     async registerEmployee(req, res) {
-        const newEmployee = await employeeService.registerEmployee(req.body);
+        const newEmployee = await employeeService.registerEmployee(req.body);     
 
         res.status(201).json({msg: `Employee ${newEmployee.rows[0].name} registered successfully`})
     }

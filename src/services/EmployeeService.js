@@ -2,6 +2,7 @@ const { UnauthorizedError } = require('../helpers/ApiError')
 const employeeRepository = require('../repositories/EmployeeRepository')
 const capitalize = require("../helpers/capitalize")
 const passwordHash = require('../helpers/passwordHash')
+
 class EmployeeService {
 
     async getAllEmployees() {
