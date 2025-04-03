@@ -1,4 +1,5 @@
 const { pool } = require('../db/db')
+
 const { NotFoundError, BadRequestError } = require('../helpers/ApiError')
 
 class ProductRepository {
