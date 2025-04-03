@@ -4,6 +4,7 @@ const employeeController = require('./controllers/EmployeeController.js')
 const createEmployeeValidationMiddleware = require('./middlewares/createEmployeeValidationMiddleware.js')
 const productController = require('./controllers/ProductController.js')
 const createProductValidationMiddleware = require('./middlewares/createProductValidationMiddleware.js')
+const saleController = require('./controllers/SaleController.js')
 
 
 // employee routes
@@ -19,5 +20,11 @@ router.get('/product', productController.getAllProducts)
 router.get('/product/:id', productController.getProductById)
 
 router.post('/product', createProductValidationMiddleware, productController.registerProduct)
+
+
+
+
+// sale routes
+router.post('/sale', saleController.registerSale)
 
 module.exports = router
